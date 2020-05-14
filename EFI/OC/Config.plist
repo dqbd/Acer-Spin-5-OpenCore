@@ -792,7 +792,7 @@
 			<key>ScanPolicy</key>
 			<integer>983299</integer>
 			<key>Vault</key>
-			<string>Secure</string>
+			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
 		<array>
