@@ -833,7 +833,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 -uia_exclude_hs</string>
+				<string>-v keepsyms=1 -uia_exclude_hs uia_include=HS01</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
