@@ -1,0 +1,6 @@
+SSDT-EC-USBX.aml
+SSDT-GPI0.aml
+SSDT-HPET.aml
+SSDT-PLUG.aml
+SSDT-PNLF.aml
+SSDT-XOSI.aml
