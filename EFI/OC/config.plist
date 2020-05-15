@@ -250,15 +250,15 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AADAhw==</data>
+				<data>AAAWWQ==</data>
 				<key>device-id</key>
-				<data>wIcAAA==</data>
+				<data>FlkAAA==</data>
 				<key>framebuffer-fbmem</key>
-				<data>AAAAAA==</data>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
-				<data>AAAgAg==</data>
+				<data>AAAwAQ==</data>
 			</dict>
 		</dict>
 		<key>Block</key>
