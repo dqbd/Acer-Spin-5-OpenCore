@@ -7,7 +7,7 @@ DefinitionBlock ("", "SSDT", 2, "CORP ", "SsdtEC", 0x00001000)
     {
         Device (EC)
         {
-            Name (_HID, "ACID0001")  // _HID: Hardware ID
+            Name (_HID, "EC000000")  // _HID: Hardware ID
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (_OSI ("Darwin"))
