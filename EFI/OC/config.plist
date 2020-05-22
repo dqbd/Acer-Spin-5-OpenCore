@@ -10,6 +10,14 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Comment</key>
+				<string>SSDT-EC.aml</string>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
+			</dict>
+			<dict>
+				<key>Enabled</key>
+				<true/>
+				<key>Comment</key>
 				<string>SSDT-GPI0.aml</string>
 				<key>Path</key>
 				<string>SSDT-GPI0.aml</string>
@@ -37,14 +45,6 @@
 				<string>SSDT-PNLF.aml</string>
 				<key>Path</key>
 				<string>SSDT-PNLF.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Comment</key>
-				<string>SSDT-EC.aml</string>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -364,7 +364,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -396,7 +396,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -412,7 +412,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -476,7 +476,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -492,7 +492,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -688,7 +688,7 @@
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
 			<key>Target</key>
-			<integer>67</integer>
+			<integer>127</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -765,7 +765,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 npci=0x2000 alcid=21</string>
+				<string>-v keepsyms=1 npci=0x2000 alcid=21 acpi_layer=0x08 acpi_level=0x02 debug=0x12a</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
