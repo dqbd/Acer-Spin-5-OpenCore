@@ -54,6 +54,14 @@
 				<key>Path</key>
 				<string>SSDT-USBX.aml</string>
 			</dict>
+			<dict>
+				<key>Enabled</key>
+				<true/>
+				<key>Comment</key>
+				<string>DSDT.aml</string>
+				<key>Path</key>
+				<string>DSDT.aml</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>

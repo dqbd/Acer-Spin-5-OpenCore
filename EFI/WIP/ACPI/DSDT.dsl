@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20180105 (32-bit version)
- * Copyright (c) 2000 - 2018 Intel Corporation
+ * AML/ASL+ Disassembler version 20200110 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of C:/Users/david/Desktop/SSDTTime/Results/DSDT.aml, Thu May 14 19:56:28 2020
+ * Disassembly of iASLGgFguh.aml, Sat May 23 14:36:09 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
  *     Length           0x00029393 (168851)
  *     Revision         0x02
- *     Checksum         0x0C
+ *     Checksum         0x85
  *     OEM ID           "ACRSYS"
  *     OEM Table ID     "ACRPRDCT"
  *     OEM Revision     0x00000000 (0)
@@ -228,7 +228,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
     Name (SS2, Zero)
     Name (SS3, One)
     Name (SS4, One)
-    OperationRegion (GNVS, SystemMemory, 0x8CF67018, 0x0767)
+    OperationRegion (GNVS, SystemMemory, 0x8CF65018, 0x0767)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -1397,7 +1397,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         RWAN,   8
     }
 
-    OperationRegion (OGNS, SystemMemory, 0x8CF67FD8, 0x0000000C)
+    OperationRegion (OGNS, SystemMemory, 0x8CF65FD8, 0x0000000C)
     Field (OGNS, AnyAcc, Lock, Preserve)
     {
         OG00,   8, 
@@ -3571,7 +3571,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         }
     }
 
-    Name (PNVB, 0x8CF7E898)
+    Name (PNVB, 0x8CF7D898)
     Name (PNVL, 0x0287)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -4587,7 +4587,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Scope (_GPE)
     {
-        Method (_L6D, 0, Serialized)  // _Lxx: Level-Triggered GPE
+        Method (_L6D, 0, Serialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             \_SB.PCI0.XHC.GPEH ()
             \_SB.PCI0.HDAS.GPEH ()
@@ -16508,7 +16508,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 Return (Zero)
             }
 
-            Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
+            Method (XCRS, 0, Serialized)
             {
                 If (HPTE)
                 {
@@ -16800,7 +16800,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     0x08,               // Length
                     )
                 IRQNoFlags ()
-                    {8}
+                    {}
             })
         }
 
@@ -16822,7 +16822,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     0x04,               // Length
                     )
                 IRQNoFlags ()
-                    {0}
+                    {}
             })
         }
 
@@ -20440,7 +20440,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Scope (_GPE)
     {
-        Method (_L69, 0, Serialized)  // _Lxx: Level-Triggered GPE
+        Method (_L69, 0, Serialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             \_SB.PCI0.RP01.HPME ()
             \_SB.PCI0.RP02.HPME ()
@@ -20471,7 +20471,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             If ((\_SB.PCI0.D1F2 == One)){}
         }
 
-        Method (_L61, 0, NotSerialized)  // _Lxx: Level-Triggered GPE
+        Method (_L61, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             L01C += One
             P8XH (Zero, One)
@@ -20957,7 +20957,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             }
         }
 
-        Method (_L62, 0, NotSerialized)  // _Lxx: Level-Triggered GPE
+        Method (_L62, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             GPEC = Zero
             If (CondRefOf (\_PR.DTSE))
@@ -20984,7 +20984,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             }
         }
 
-        Method (_L66, 0, NotSerialized)  // _Lxx: Level-Triggered GPE
+        Method (_L66, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             If ((\_SB.PCI0.GFX0.GSSE && !GSMI))
             {
@@ -20992,7 +20992,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             }
         }
 
-        Method (_L6F, 0, NotSerialized)  // _Lxx: Level-Triggered GPE
+        Method (_L6F, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
         {
             If ((RTD3 == One))
             {
@@ -21098,7 +21098,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         Name (_UID, "SADDLESTRING")  // _UID: Unique ID
         If ((S0ID == Zero))
         {
-            Method (_EJ0, 1, NotSerialized)  // _EJx: Eject Device
+            Method (_EJ0, 1, NotSerialized)  // _EJx: Eject Device, x=0-9
             {
                 P8XH (Zero, 0xED)
                 Return (Zero)
@@ -33815,7 +33815,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Name (BUFN, Zero)
     Name (MBUF, Buffer (0x1000){})
-    OperationRegion (MDBG, SystemMemory, 0x8CF54018, 0x00001004)
+    OperationRegion (MDBG, SystemMemory, 0x8CF52018, 0x00001004)
     Field (MDBG, AnyAcc, Lock, Preserve)
     {
         MDG0,   32768
