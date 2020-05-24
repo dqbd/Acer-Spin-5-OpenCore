@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Enabled</key>
-				<true/>
+				<false />
 				<key>Comment</key>
 				<string>SSDT-GPI0.aml</string>
 				<key>Path</key>
