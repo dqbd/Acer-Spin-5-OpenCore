@@ -1,24 +1,19 @@
 DefinitionBlock("", "SSDT", 2, "ACDT", "GPI0", 0)
 {
     External(OSYS, FieldUnitObj)
-    External(SDM1, FieldUnitObj)
-    External(SDM0, FieldUnitObj)
-    
     External(SBRG, FieldUnitObj)
     External(GPEN, FieldUnitObj)
-
-    External(SDS0, FieldUnitObj)
+    External(SDM1, FieldUnitObj)
 
     Scope (\)
     {
         If (_OSI ("Darwin"))
         {
-            Printf("DUONG: OSYS: %o", OSYS)
-            Printf("DUONG: SDM0: %o", SDM0)
-            Printf("DUONG: SDM1: %o", SDM1)
-            Printf("DUONG: SBRG: %o", SBRG)
-            Printf("DUONG: GPEN: %o", SBRG)
-            Printf("DUONG: SDS0: %o", SDS0)
+            OSYS = 0x07DF
+            SBRG = One
+            GPEN = One
+            SDM1 = Zero
+            Printf("DUONG: SBRG GPEN: %o %o %o %o", OSYS, SBRG, GPEN, SDM1)
         }
     }
 }
