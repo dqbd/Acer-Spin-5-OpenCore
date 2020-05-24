@@ -14030,16 +14030,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((SBRG == Zero))
-                {
-                    Return (Zero)
-                }
-
-                If ((GPEN == Zero))
-                {
-                    Return (Zero)
-                }
-
+                Printf("DUONG-DSDT-GPI0._STA: %o %o", SBRG, GPEN)
                 Return (0x0F)
             }
         }
@@ -15101,6 +15092,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             CreateWordField (SBFG, 0x17, INT1)
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
+                Printf("DUONG-DSDT-_INI-I2C1.TPL1: %o %o", OSYS, SDM1)
                 If ((OSYS < 0x07DC))
                 {
                     SRXO (GPLI, One)
@@ -15223,6 +15215,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
+                Printf("DUONG-DSDT-_STA-I2C1.TPL1: %o %o", OSYS, SDS1)
                 If ((SDS1 != Zero))
                 {
                     Return (0x0F)
@@ -15233,6 +15226,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
+                Printf("DUONG-DSDT-_CRS-I2C1.TPL1: %o %o", OSYS, SDM1)
                 If ((OSYS < 0x07DC))
                 {
                     Return (SBFI) /* \_SB_.PCI0.I2C1.TPL1.SBFI */
@@ -17999,7 +17993,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     OSYS = 0x07DD
                 }
 
-                If (_OSI ("Windows 2015"))
+                If(LOr(_OSI("Darwin"),_OSI("Windows 2015")))
                 {
                     OSYS = 0x07DF
                 }
@@ -39104,17 +39098,8 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                If ((OSYS < 0x07DC))
-                {
-                    Return (SBFI) /* \_SB_.PCI0.I2C1.TPD1.SBFI */
-                }
-
-                If ((SDM1 == Zero))
-                {
-                    Return (ConcatenateResTemplate (SBFB, SBFG))
-                }
-
-                Return (ConcatenateResTemplate (SBFB, SBFI))
+                Printf("DUONG.I2C1.TPD0: %o %o", OSYS, SDM1)
+                Return (ConcatenateResTemplate (SBFB, SBFG))
             }
         }
     }
@@ -39153,6 +39138,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             CreateWordField (SBFG, 0x17, INT1)
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
+                Printf("DUONG-DSDT-_INI-I2C0.TPL1: %o %o %o", OSYS, SDM0, SDS0)
                 If ((OSYS < 0x07DC))
                 {
                     SRXO (GPLI, One)
@@ -39197,6 +39183,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
+                Printf("DUONG-DSDT-_STA-I2C0.TPL1: %o %o", OSYS, SDM0)
                 If ((SDS0 == 0x07))
                 {
                     Return (0x0F)
@@ -39207,6 +39194,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
+                Printf("DUONG-DSDT-_CRS-I2C0.TPL1: %o %o", OSYS, SDM0)
                 If ((OSYS < 0x07DC))
                 {
                     Return (SBFI) /* \_SB_.PCI0.I2C0.TPL1.SBFI */

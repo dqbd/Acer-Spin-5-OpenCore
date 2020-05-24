@@ -1,4 +1,3 @@
-
 DefinitionBlock ("", "SSDT", 2, "CORP", "CpuPlug", 0x00003000)
 {
     External (_PR_.PR00, ProcessorObj)
