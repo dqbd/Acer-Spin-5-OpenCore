@@ -54,14 +54,6 @@
 				<key>Path</key>
 				<string>SSDT-USBX.aml</string>
 			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Comment</key>
-				<string>DSDT.aml</string>
-				<key>Path</key>
-				<string>DSDT.aml</string>
-			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -185,6 +177,20 @@
 				<data>X09TSQ==</data>
 				<key>Replace</key>
 				<data>WE9TSQ==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Set OSYS to Windows 10</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Find</key>
+				<data>0AdPU1lT</data>
+				<key>Replace</key>
+				<data>3wdPU1lT</data>
+				<key>Count</key>
+				<integer>1</integer>
 			</dict>
 		</array>
 		<key>Quirks</key>

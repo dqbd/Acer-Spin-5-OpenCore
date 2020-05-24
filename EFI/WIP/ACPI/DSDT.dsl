@@ -17999,7 +17999,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     OSYS = 0x07DD
                 }
 
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2015")))
+                If (_OSI ("Windows 2015"))
                 {
                     OSYS = 0x07DF
                 }
