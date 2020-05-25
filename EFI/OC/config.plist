@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Enabled</key>
-				<true />
+				<true/>
 				<key>Comment</key>
 				<string>SSDT-GPI0.aml</string>
 				<key>Path</key>
@@ -515,6 +515,22 @@
 				<string>VoodooI2CHID.kext</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2CHID</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>CPUFriendDataProvider.kext</string>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
