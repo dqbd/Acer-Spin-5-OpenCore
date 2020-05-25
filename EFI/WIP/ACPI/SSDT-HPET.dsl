@@ -20,7 +20,7 @@
  */
 DefinitionBlock ("", "SSDT", 2, "CORP", "HPET", 0x00000000)
 {
-    External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.HPET, DeviceObj)
 
     Name (\_SB.PCI0.LPCB.HPET._CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
     {

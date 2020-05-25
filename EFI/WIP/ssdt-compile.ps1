@@ -1,5 +1,5 @@
 Write-Output "--- Compiling SSDTs ---" 
-Get-ChildItem -Path ".\ACPI" -Filter SSDT-EC.dsl | ForEach-Object {
+Get-ChildItem -Path ".\ACPI" -Filter SSDT*.dsl | ForEach-Object {
   ../../../iasl/iasl.exe -tc $_.FullName
 }
 Write-Output "--- Copying used SSDT to OC ---"
