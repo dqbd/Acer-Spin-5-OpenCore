@@ -2,6 +2,8 @@
 DefinitionBlock ("", "SSDT", 2, "CORP ", "SsdtEC", 0x00001000)
 {
     External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.EC0, DeviceObj)
+    External (_SB_.PCI0.LPCB.KBD0, DeviceObj)
 
     Scope (\_SB.PCI0.LPCB)
     {
@@ -19,6 +21,21 @@ DefinitionBlock ("", "SSDT", 2, "CORP ", "SsdtEC", 0x00001000)
                     Return (Zero)
                 }
             }
+        }
+    }
+
+    Scope (\_SB.PCI0.LPCB.EC0)
+    {
+        Method (_Q1C, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Printf("DUONG-XQ1C")
+            Notify (\_SB.PCI0.LPCB.KBD0, 0x0405)
+        }
+
+        Method (_Q1D, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Printf("DUONG-XQ1D")
+            Notify (\_SB.PCI0.LPCB.KBD0, 0x0406)
         }
     }
 }

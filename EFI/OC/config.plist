@@ -192,6 +192,34 @@
 				<key>Count</key>
 				<integer>1</integer>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Set _Q1C to XQ1C</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Find</key>
+				<data>X1ExQw==</data>
+				<key>Replace</key>
+				<data>WFExQw==</data>
+				<key>Count</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Set _Q1D to XQ1D</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Find</key>
+				<data>X1ExRA==</data>
+				<key>Replace</key>
+				<data>WFExRA==</data>
+				<key>Count</key>
+				<integer>1</integer>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
