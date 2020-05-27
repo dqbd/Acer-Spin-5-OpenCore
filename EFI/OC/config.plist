@@ -843,7 +843,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v -alcdbg -liludbg keepsyms=1 npci=0x2000 alcid=21 acpi_layer=0x08 acpi_level=0x02 debug=0x12a</string>
+				<string>-v -f keepsyms=1 npci=0x2000 alcid=21 acpi_layer=0x08 acpi_level=0x02 debug=0x12a</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
